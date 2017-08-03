@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import ShopList from './components/ShopList';
 import Loading from './components/Loading';
 import Failed from './components/Failed';
 
@@ -42,9 +43,7 @@ class App extends Component {
         <div className="App-header">
           <h3>Welcome to Discounts-UA</h3>
         </div>
-        <p className="App-intro">
-          <h3>{this.state.shops[0].name}</h3>
-        </p>
+        <ShopList shops={this.state.shops} />
       </div>
     );
   }
