@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import Loading from './components/Loading';
+import Failed from './components/Failed';
 
 const shops_api_url = 'https://discounts-ua.herokuapp.com/api/shops'
 
@@ -32,8 +34,8 @@ class App extends Component {
   }
 
   render() {
-    if (this.state.requestFailed) return <h3>Failed!</h3>
-    if (!this.state.shops) return <h3>Loading...</h3>
+    if (this.state.requestFailed) return <Failed />
+    if (!this.state.shops) return <Loading />
 
     return (
       <div className="App">
