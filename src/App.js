@@ -8,12 +8,13 @@ class App extends Component {
     super(props)
     this.state = {}
   }
+
   componentDidMount() {
     fetch(shops_api_url)
-      .then(d => d.json())
-      .then(d => {
+      .then(data => data.json())
+      .then(data => {
         this.setState({
-          shops: d
+          shops: data
         })
       })
   }
