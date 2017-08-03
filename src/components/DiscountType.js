@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-// import DiscountTypeList from './DiscountTypeList';
+import DiscountList from './DiscountList';
 // import './DiscountType.css';
 
 class DiscountType extends Component {
   render() {
     return (
       <div className="DiscountType">
-        <div className="DiscountTypeName">
-          {this.props.name}
+        <div className="DiscountTypeInfo">
+          {this.props.name} (from {this.props.startDate} to {this.props.endDate})
         </div>
+        <DiscountList discounts={this.props.discounts} />
       </div>
     );
   }
