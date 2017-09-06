@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Discounts UA",
+  "name": "Discounts UA: parsed discounts form ukrainian stores",
   "icons": [
     {
       "src": "favicon.ico",
