@@ -5,9 +5,17 @@ class Discount extends Component {
   render() {
     return (
       <div className="Discount">
-        <div className="DiscountInfo">
-          <img src={this.props.imageUrlSmall} alt={this.props.name} />
-          {this.props.name} ({this.props.oldPrice} -> {this.props.newPrice})
+        <img src={this.props.imageUrlSmall} alt={this.props.name} className="DiscountImage"/>
+        <div className="DiscountName">
+          {this.props.name}
+        </div>
+        <div className="DiscountPrices">
+          <div className="DiscountOldPrice">
+            {this.props.oldPrice}
+          </div>
+          <div className="DiscountNewPrice">
+            {this.props.newPrice}
+          </div>
         </div>
       </div>
     );

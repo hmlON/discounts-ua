@@ -1,13 +1,62 @@
-.App {
+.DiscountType {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.DiscountTypeInfo {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px 0;
   text-align: center;
+  background: #2c3e50;
+  color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #222;
-  padding: 5px;
-  color: white;
+.DiscountList {display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
 }
 
-.App-intro {
-  font-size: large;
+.Discount {
+  width: 200px;
+  margin: 5px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.DiscountImage {
+  width: 100%;
+}
+
+.DiscountName {
+  overflow-wrap: break-word;
+  padding: 0 5px;
+}
+
+.DiscountPrices {
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.DiscountNewPrice {
+  font-size: 1.5em;
+}
+
+.DiscountOldPrice {
+  text-decoration: line-through;
+}
+
+@media (max-width: 478px) {
+  .Discount {
+    width: 45%;
+    margin: 5px;
+  }
 }
