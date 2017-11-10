@@ -1,3 +1,46 @@
+:root {
+  --bg-color: #2c3e50;
+  --main-color: #FFAB00;
+}
+
+.App {
+  background: #EEE;
+  display: flex;
+}
+
+.Menu {
+  flex: 1;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background: var(--bg-color);
+  padding-top: 15px;
+}
+
+.Brand {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 1em;
+  color: #fff;
+}
+
+.MenuShop {
+  border-bottom: 3px solid grey;
+  padding: 5px;
+  font-size: 1.25em;
+  margin: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.MenuShop:hover {
+  border-color: var(--main-color);
+}
+
+.Shop {
+  flex: 3;
+}
+
 .DiscountType {
   display: flex;
   flex-direction: column;
@@ -11,23 +54,31 @@
   font-size: 20px;
   padding: 10px 0;
   text-align: center;
-  background: #2c3e50;
+  position: sticky;
+  top: 0;
+  background: var(--bg-color);
   color: #fff;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 10px;
+  box-shadow: 0px 7px 5px -1px rgba(0,0,0,0.2);
 }
 
-.DiscountList {display: flex;
+.DiscountList {
+  padding: 10px 5px 0 5px;
+  display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  max-width: 1200px;
 }
 
 .Discount {
-  width: 200px;
-  margin: 5px;
+  flex-grow: 1;
+  width: 300px;
+  max-width: 350px;
+  margin: 6px;
   text-align: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: #fff;
+}
+
+.Discount:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .DiscountImage {
@@ -54,7 +105,11 @@
   text-decoration: line-through;
 }
 
-@media (max-width: 478px) {
+@media (max-width: 620px) {
+  .Menu {
+    display: none;
+  }
+
   .Discount {
     width: 45%;
     margin: 5px;
