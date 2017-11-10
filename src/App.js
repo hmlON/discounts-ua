@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import ShopList from './components/ShopList';
+import Shop from './components/Shop';
 import Loading from './components/Loading';
 import Failed from './components/Failed';
 
@@ -8,7 +8,8 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      requestFailed: false
+      requestFailed: false,
+      activeShopId: null,
     }
   }
 
@@ -432,9 +433,16 @@ class App extends Component {
     if (this.state.requestFailed) return <Failed />
     if (!this.state.shops) return <Loading />
 
+    const shopNames = this.state.shops.map((shop) => <div className="MenuShop">{shop.name}</div>)
+    const activeShop = this.state.shops.find((shop) => shop.id == this.state.activeShopId)
+
     return (
       <div className="App">
-        <ShopList shops={this.state.shops} />
+        <div className="Menu">
+          <div className="Brand">Discounts UA</div>
+          <div className="MenuShopNames">{shopNames}</div>
+        </div>
+        <Shop {...activeShop} />
       </div>
     );
   }
