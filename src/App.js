@@ -429,11 +429,15 @@ class App extends Component {
     })
   }
 
+  updateActiveShop(shopId) {
+    this.setState({activeShopId: shopId})
+  }
+
   render() {
     if (this.state.requestFailed) return <Failed />
     if (!this.state.shops) return <Loading />
 
-    const shopNames = this.state.shops.map((shop) => <div className="MenuShop">{shop.name}</div>)
+    const shopNames = this.state.shops.map((shop) => <div className="MenuShop" onClick={() => this.updateActiveShop(shop.id)}>{shop.name}</div>)
     const activeShop = this.state.shops.find((shop) => shop.id == this.state.activeShopId)
 
     return (
