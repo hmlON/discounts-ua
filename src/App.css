@@ -30,6 +30,7 @@
 }
 
 .MenuShop {
+  display: block;
   border-bottom: 3px solid grey;
   padding: 5px;
   font-size: 1.25em;
