@@ -29,7 +29,7 @@ class App extends Component {
     if (!this.state.shops) return <Loading />
 
     const links = this.state.shops.map(shop =>
-        <Link to={shop.path}
+        <Link to={"/discounts-ua/" + shop.path}
               className={"MenuShop" + (shop.id === this.state.activeShopId ? " MenuShopActive" : "")}>
           {shop.name}
         </Link>
@@ -43,7 +43,7 @@ class App extends Component {
         </div>
 
         <Switch>
-          <Route path={"/:shop"} component={Shop}/>
+          <Route path={"/discounts-ua/:shop"} component={Shop}/>
         </Switch>
       </div>
     );
