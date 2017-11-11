@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Switch, Route, Link } from 'react-router-dom'
-import Shop from './components/Shop';
-import Loading from './components/Loading';
-import Failed from './components/Failed';
+import Shop from './Shop';
+import Loading from './Loading';
+import Failed from './Failed';
 
 class App extends Component {
   constructor(props) {
