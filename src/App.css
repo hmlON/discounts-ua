@@ -13,15 +13,19 @@
   position: sticky;
   top: 0;
   height: 100vh;
-  background: var(--bg-color);
-  padding-top: 15px;
 }
 
 .Brand {
-  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  height: 60px;
   text-align: center;
   margin-bottom: 1em;
   color: #fff;
+  background: var(--bg-color);
+  box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.2);
 }
 
 .MenuShop {
@@ -30,15 +34,14 @@
   font-size: 1.25em;
   margin: 20px;
   text-align: center;
-  color: #fff;
 }
 
-.MenuShop:hover {
+.MenuShop:hover, .MenuShopActive {
   border-color: var(--main-color);
 }
 
 .Shop {
-  flex: 3;
+  flex: 4;
 }
 
 .DiscountType {
@@ -52,13 +55,13 @@
 .DiscountTypeInfo {
   width: 100%;
   font-size: 20px;
-  padding: 10px 0;
+  padding: 20px 0;
   text-align: center;
   position: sticky;
   top: 0;
   background: var(--bg-color);
   color: #fff;
-  box-shadow: 0px 7px 5px -1px rgba(0,0,0,0.2);
+  box-shadow: 0px 10px 20px -5px rgba(0,0,0,0.2);
 }
 
 .DiscountList {
@@ -71,7 +74,7 @@
 .Discount {
   flex-grow: 1;
   width: 300px;
-  max-width: 350px;
+  max-width: 400px;
   margin: 6px;
   text-align: center;
   background: #fff;
@@ -108,6 +111,10 @@
 @media (max-width: 620px) {
   .Menu {
     display: none;
+  }
+
+  .DiscountTypeInfo {
+    padding: 10px 0;
   }
 
   .Discount {
