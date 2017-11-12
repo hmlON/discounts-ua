@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import './Discount.css';
+import './Discount.css';
 
 class Discount extends Component {
   formatPrice(price) {

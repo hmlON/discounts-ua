@@ -1,3 +1,8 @@
+:root {
+  --bg-color: #2c3e50;
+  --main-color: #FFAB00;
+}
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,

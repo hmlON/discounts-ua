@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Discount from '../Discount/Discount';
-// import './DiscountType.css';
+import './DiscountType.css';
 
 class DiscountType extends Component {
   formatDate(date) {

@@ -1,0 +1,43 @@
+.Discount {
+  flex-grow: 1;
+  width: 300px;
+  max-width: 400px;
+  margin: 6px;
+  text-align: center;
+  background: #fff;
+}
+
+.Discount:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.DiscountImage {
+  width: 100%;
+}
+
+.DiscountName {
+  overflow-wrap: break-word;
+  padding: 0 5px;
+}
+
+.DiscountPrices {
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.DiscountNewPrice {
+  font-size: 1.5em;
+}
+
+.DiscountOldPrice {
+  text-decoration: line-through;
+}
+
+@media (max-width: 620px) {
+  .Discount {
+    width: 45%;
+    margin: 5px;
+  }
+}
