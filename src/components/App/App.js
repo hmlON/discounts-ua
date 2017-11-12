@@ -3,8 +3,7 @@ import './App.css';
 import { Switch, Route, Link } from 'react-router-dom'
 import API from '../../utils/api';
 import Shop from '../Shop/Shop';
-import Loading from '../Loading';
-import Failed from '../Failed';
+import Loading from '../Loading/Loading';
 
 class App extends Component {
   constructor(props) {
@@ -25,7 +24,7 @@ class App extends Component {
   }
 
   render() {
-    if (this.state.requestFailed) return <Failed />
+    if (this.state.requestFailed) return <div class="Falied">Failed!</div>
     if (!this.state.shops) return <Loading />
 
     const links = this.state.shops.map(shop =>
