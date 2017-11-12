@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Switch, Route, Link } from 'react-router-dom'
-import API from '../utils/api';
-import Shop from './Shop';
-import Loading from './Loading';
-import Failed from './Failed';
+import API from '../../utils/api';
+import Shop from '../Shop/Shop';
+import Loading from '../Loading';
+import Failed from '../Failed';
 
 class App extends Component {
   constructor(props) {

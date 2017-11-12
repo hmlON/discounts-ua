@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import DiscountType from './DiscountType';
-import API from '../utils/api';
+import DiscountType from '../DiscountType/DiscountType';
+import API from '../../utils/api';
 
 class Shop extends Component {
   constructor(props) {

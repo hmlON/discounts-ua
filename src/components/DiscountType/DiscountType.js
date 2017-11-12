@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Discount from './Discount';
+import Discount from '../Discount/Discount';
 // import './DiscountType.css';
 
 class DiscountType extends Component {
