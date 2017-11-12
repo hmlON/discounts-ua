@@ -13,7 +13,8 @@ class DiscountType extends Component {
                 oldPrice={discount.price_old}
                 newPrice={discount.price_new}
                 imageUrl={discount.img_url}
-                imageUrlSmall={discount.small_img_url} />
+                imageUrlSmall={discount.small_img_url}
+                key={discount.id} />
     )
   }
 

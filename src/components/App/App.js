@@ -29,7 +29,8 @@ class App extends Component {
 
     const links = this.state.shops.map(shop =>
         <Link to={"/discounts-ua/" + shop.path}
-              className={"MenuItem" + (shop.id === this.state.activeShopId ? " MenuItemActive" : "")}>
+              className={"MenuItem" + (shop.id === this.state.activeShopId ? " MenuItemActive" : "")}
+              key={shop.id} >
           {shop.name}
         </Link>
     )

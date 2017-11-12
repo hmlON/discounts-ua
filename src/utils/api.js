@@ -23,6 +23,7 @@ class API {
         "path":"atb",
         "discount_types":[
           {
+            "id":1,
             "name":"Economy",
             "active_period":{
               "start_date": "2017-11-01T00:00:00.000Z",
@@ -186,6 +187,7 @@ class API {
             }
           },
           {
+            "id":2,
             "name":"Price of the week",
             "active_period":{
               "start_date": "2017-11-01T00:00:00.000Z",
@@ -300,6 +302,7 @@ class API {
         "path":"silpo",
         "discount_types":[
           {
+            "id":3,
             "name":"Price of the week",
             "active_period":{
               "start_date": "2017-11-01T00:00:00.000Z",

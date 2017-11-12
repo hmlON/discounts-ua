@@ -28,7 +28,8 @@ class Shop extends Component {
       <DiscountType name={discountType.name}
                     startDate={discountType.active_period.start_date}
                     endDate={discountType.active_period.end_date}
-                    discounts={discountType.active_period.discounts} />
+                    discounts={discountType.active_period.discounts}
+                    key={discountType.id} />
     )
   }
 
