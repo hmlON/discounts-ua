@@ -1,10 +1,20 @@
 import React, { Component } from 'react';
-import DiscountList from './DiscountList';
+import Discount from './Discount';
 // import './DiscountType.css';
 
 class DiscountType extends Component {
   formatDate(date) {
     return (new Date(date)).toLocaleDateString()
+  }
+
+  renderDiscount(discount) {
+    return (
+      <Discount name={discount.name}
+                oldPrice={discount.price_old}
+                newPrice={discount.price_new}
+                imageUrl={discount.img_url}
+                imageUrlSmall={discount.small_img_url} />
+    )
   }
 
   render() {
@@ -16,9 +26,11 @@ class DiscountType extends Component {
         <div className="DiscountTypeInfo">
           {this.props.name} (from {startDate} to {endDate})
         </div>
-        <DiscountList discounts={this.props.discounts} />
+        <div className="DiscountList">
+          {this.props.discounts.map(this.renderDiscount)}
+        </div>
       </div>
-    );
+    )
   }
 }
 

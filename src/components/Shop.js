@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DiscountTypeList from './DiscountTypeList';
+import DiscountType from './DiscountType';
 import API from '../utils/api';
 
 class Shop extends Component {
@@ -22,12 +22,21 @@ class Shop extends Component {
     }
   }
 
+  renderDiscountType(discountType) {
+    return (
+      <DiscountType name={discountType.name}
+                    startDate={discountType.active_period.start_date}
+                    endDate={discountType.active_period.end_date}
+                    discounts={discountType.active_period.discounts} />
+    )
+  }
+
   render() {
     if (!this.state.discount_types) return <div className="Shop">"Loading..."</div>
 
     return (
       <div className="Shop">
-        <DiscountTypeList discountTypes={this.state.discount_types} />
+        {this.state.discount_types.map(this.renderDiscountType)}
       </div>
     );
   }
