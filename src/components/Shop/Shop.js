@@ -10,8 +10,7 @@ class Shop extends Component {
   }
 
   componentDidMount() {
-    const path = this.props.match.params.shop
-    API.shop(path).then(shop => this.setState({...shop}))
+    this.fetchShop()
   }
 
   componentDidUpdate(prevProps) {
@@ -19,8 +18,13 @@ class Shop extends Component {
     const newPath = this.props.match.params.shop
 
     if (prevPath !== newPath) {
-      API.shop(newPath).then(shop => this.setState({...shop}))
+      this.fetchShop()
     }
+  }
+
+  fetchShop() {
+    const path = this.props.match.params.shop
+    API.shop(path).then(shop => this.setState({...shop}))
   }
 
   renderDiscountType(discountType) {
