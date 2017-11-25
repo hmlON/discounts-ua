@@ -1,0 +1,42 @@
+.Menu {
+  flex: 1;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background: #fff;
+}
+
+.Brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  height: 63px;
+  text-align: center;
+  margin-bottom: 0.75em;
+  color: #fff;
+  background: var(--bg-color);
+  box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.2);
+}
+
+.NavItem {
+  display: block;
+  border-bottom: 3px solid grey;
+  padding: 5px;
+  font-size: 1.5em;
+  margin: 0 30px;
+  margin-bottom: 0.5em;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+}
+
+.NavItem:hover, .MenuItemActive {
+  border-color: var(--main-color);
+}
+
+@media (max-width: 620px) {
+  .Menu {
+    display: none;
+  }
+}

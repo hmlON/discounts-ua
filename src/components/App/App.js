@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Switch, Route, Link } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import API from '../../utils/api';
 import Shop from '../Shop/Shop';
+import Menu from '../Menu/Menu';
 import Loading from '../Loading/Loading';
 
 class App extends Component {
@@ -25,20 +26,9 @@ class App extends Component {
     if (this.state.requestFailed) return <div class="Falied">Failed!</div>
     if (!this.state.shops) return <Loading />
 
-    const links = this.state.shops.map(shop =>
-          <Link to={"/discounts-ua/" + shop.path}
-                className={"NavItem"}
-                key={shop.id} >
-            {shop.name}
-          </Link>
-    )
-
     return (
       <div className="App">
-        <aside className="Menu">
-          <div className="Brand">Discounts UA</div>
-          <nav className="Nav">{links}</nav>
-        </aside>
+        <Menu shops={this.state.shops} />
 
         <Switch>
           <Route path={"/discounts-ua/:shop"} component={Shop}/>
