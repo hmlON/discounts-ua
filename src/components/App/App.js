@@ -9,16 +9,14 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      requestFailed: false,
-      activeShopId: null,
+      requestFailed: false
     }
   }
 
   componentDidMount() {
     API.shops().then(shops => {
       this.setState({
-        "shops": shops,
-        activeShopId: 1
+        "shops": shops
       })
     })
   }
@@ -29,7 +27,7 @@ class App extends Component {
 
     const links = this.state.shops.map(shop =>
           <Link to={"/discounts-ua/" + shop.path}
-                className={"MenuItem" + (shop.id === this.state.activeShopId ? " MenuItemActive" : "")}
+                className={"NavItem"}
                 key={shop.id} >
             {shop.name}
           </Link>
@@ -39,7 +37,7 @@ class App extends Component {
       <div className="App">
         <aside className="Menu">
           <div className="Brand">Discounts UA</div>
-          <nav className="MenuShopNames">{links}</nav>
+          <nav className="Nav">{links}</nav>
         </aside>
 
         <Switch>

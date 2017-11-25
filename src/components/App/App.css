@@ -24,7 +24,7 @@
   box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.2);
 }
 
-.MenuItem {
+.NavItem {
   display: block;
   border-bottom: 3px solid grey;
   padding: 5px;
@@ -36,7 +36,7 @@
   color: #000;
 }
 
-.MenuItem:hover, .MenuItemActive {
+.NavItem:hover, .MenuItemActive {
   border-color: var(--main-color);
 }
 
