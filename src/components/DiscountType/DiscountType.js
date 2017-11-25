@@ -23,14 +23,14 @@ class DiscountType extends Component {
     const endDate = this.formatDate(this.props.endDate)
 
     return (
-      <div className="DiscountType">
-        <div className="DiscountTypeInfo">
+      <section className="DiscountType">
+        <h1 className="DiscountTypeInfo">
           {this.props.name} (from {startDate} to {endDate})
-        </div>
-        <div className="DiscountList">
+        </h1>
+        <ul className="DiscountList">
           {this.props.discounts.map(this.renderDiscount)}
-        </div>
-      </div>
+        </ul>
+      </section>
     )
   }
 }

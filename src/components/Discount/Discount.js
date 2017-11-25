@@ -11,7 +11,7 @@ class Discount extends Component {
     const newPrice = this.formatPrice(this.props.newPrice)
 
     return (
-      <div className="Discount">
+      <article className="Discount">
         <img src={this.props.imageUrlSmall} alt={this.props.name} className="DiscountImage"/>
         <div className="DiscountName">
           {this.props.name}
@@ -20,7 +20,7 @@ class Discount extends Component {
           <div className="DiscountOldPrice">{oldPrice}</div>
           <div className="DiscountNewPrice">{newPrice}</div>
         </div>
-      </div>
+      </article>
     );
   }
 }

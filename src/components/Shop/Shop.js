@@ -37,9 +37,9 @@ class Shop extends Component {
     if (!this.state.discount_types) return <div className="Shop">"Loading..."</div>
 
     return (
-      <div className="Shop">
+      <main className="Shop">
         {this.state.discount_types.map(this.renderDiscountType)}
-      </div>
+      </main>
     );
   }
 }

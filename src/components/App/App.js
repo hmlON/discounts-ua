@@ -28,19 +28,19 @@ class App extends Component {
     if (!this.state.shops) return <Loading />
 
     const links = this.state.shops.map(shop =>
-        <Link to={"/discounts-ua/" + shop.path}
-              className={"MenuItem" + (shop.id === this.state.activeShopId ? " MenuItemActive" : "")}
-              key={shop.id} >
-          {shop.name}
-        </Link>
+          <Link to={"/discounts-ua/" + shop.path}
+                className={"MenuItem" + (shop.id === this.state.activeShopId ? " MenuItemActive" : "")}
+                key={shop.id} >
+            {shop.name}
+          </Link>
     )
 
     return (
       <div className="App">
-        <div className="Menu">
+        <aside className="Menu">
           <div className="Brand">Discounts UA</div>
-          <div className="MenuShopNames">{links}</div>
-        </div>
+          <nav className="MenuShopNames">{links}</nav>
+        </aside>
 
         <Switch>
           <Route path={"/discounts-ua/:shop"} component={Shop}/>
