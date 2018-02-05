@@ -12,7 +12,7 @@ class Discount extends Component {
 
     return (
       <article className="Discount">
-        <img src={this.props.imageUrlSmall} alt={this.props.name} className="DiscountImage"/>
+        <img src={this.props.imageUrl} alt={this.props.name} className="DiscountImage"/>
         <div className="DiscountName">
           {this.props.name}
         </div>

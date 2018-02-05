@@ -24,7 +24,8 @@ class Shop extends Component {
 
   fetchShop() {
     const path = this.props.match.params.shop
-    API.shop(path).then(shop => this.setState({...shop}))
+    API.shop(path)
+      .then(shop => this.setState({...shop}))
   }
 
   renderDiscountType(discountType) {

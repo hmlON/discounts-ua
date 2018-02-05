@@ -5,7 +5,7 @@ import './Menu.css';
 class Menu extends Component {
   renderLink(shop) {
     return (
-      <Link to={"/discounts-ua/" + shop.path}
+      <Link to={"/discounts-ua/" + shop.slug}
                 className={"NavItem"}
                 key={shop.id} >
         {shop.name}
