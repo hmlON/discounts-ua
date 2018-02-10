@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Discount from '../Discount/Discount';
+import { Link } from 'react-router-dom'
 import './DiscountType.css';
 
 class DiscountType extends Component {
@@ -24,9 +25,12 @@ class DiscountType extends Component {
 
     return (
       <section className="DiscountType">
-        <h1 className="DiscountTypeInfo">
-          {this.props.name} (from {startDate} to {endDate})
-        </h1>
+        <header className="DiscountTypeHeader">
+          <div className="DiscountTypeInfo">
+            {this.props.name} (from {startDate} to {endDate})
+          </div>
+          <Link to={"/discounts-ua"} className="MenuLink">&#9776;</Link>
+        </header>
         <ul className="DiscountList">
           {this.props.discounts.map(this.renderDiscount)}
         </ul>

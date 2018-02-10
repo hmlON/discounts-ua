@@ -6,12 +6,11 @@
   width: 100%;
 }
 
-.DiscountTypeInfo {
+.DiscountTypeHeader {
+  display: flex;
   width: 100%;
-  font-size: 20px;
-  padding: 20px 0;
+  font-size: 30px;
   margin: 0;
-  text-align: center;
   position: sticky;
   top: 0;
   background: var(--bg-color);
@@ -19,15 +18,33 @@
   box-shadow: 0px 10px 20px -5px rgba(0,0,0,0.2);
 }
 
+.DiscountTypeInfo {
+  padding: 20px 0;
+  text-align: center;
+  display: inline;
+  flex: 1;
+}
+
+.MenuLink {
+  padding: 20px 20px 20px 0;
+  color: lightgrey;
+  text-decoration: none;
+}
+
 .DiscountList {
   padding: 10px 5px 0 5px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  max-width: 90%;
 }
 
 @media (max-width: 620px) {
-  .DiscountTypeInfo {
-    padding: 10px 0;
+  .DiscountTypeHeader {
+    font-size: 20px;
+  }
+
+  .DiscountList {
+    max-width: 100%;
   }
 }
