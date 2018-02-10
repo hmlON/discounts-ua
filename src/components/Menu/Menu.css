@@ -34,9 +34,3 @@
 .NavItem:hover, .MenuItemActive {
   border-color: var(--main-color);
 }
-
-@media (max-width: 620px) {
-  .Menu {
-    display: none;
-  }
-}
