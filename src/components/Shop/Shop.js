@@ -31,9 +31,9 @@ class Shop extends Component {
   renderDiscountType(discountType) {
     return (
       <DiscountType name={discountType.name}
-                    startDate={discountType.active_period.start_date}
-                    endDate={discountType.active_period.end_date}
-                    discounts={discountType.active_period.discounts}
+                    startDate={discountType.start_date}
+                    endDate={discountType.end_date}
+                    discounts={discountType.discounts}
                     key={discountType.id} />
     )
   }
