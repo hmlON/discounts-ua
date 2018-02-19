@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DiscountType from '../DiscountType/DiscountType';
 import API from '../../utils/api';
+import Loading from '../Loading/Loading';
 import './Shop.css';
 
 class Shop extends Component {
@@ -39,7 +40,7 @@ class Shop extends Component {
   }
 
   render() {
-    if (!this.state.discount_types) return <div className="Shop">"Loading..."</div>
+    if (!this.state.discount_types) return <Loading />
 
     return (
       <main className="Shop">

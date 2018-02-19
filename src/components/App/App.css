@@ -1,4 +1,5 @@
 .App {
   background: #EEE;
   display: flex;
+  height: 100vh;
 }
