@@ -3,7 +3,7 @@
   position: sticky;
   top: 0;
   height: 100vh;
-  background: #fff;
+  background: #EEE;
 }
 
 .Brand {
@@ -15,7 +15,7 @@
   text-align: center;
   margin-bottom: 0.75em;
   color: #fff;
-  background: var(--bg-color);
+  background: var(--main-color);
   box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.2);
 }
 
@@ -32,5 +32,5 @@
 }
 
 .NavItem:hover, .MenuItemActive {
-  border-color: var(--main-color);
+  border-color: var(--accent-color);
 }
