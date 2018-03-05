@@ -22,12 +22,14 @@ class DiscountType extends Component {
   render() {
     const startDate = this.formatDate(this.props.startDate)
     const endDate = this.formatDate(this.props.endDate)
+    const lastUpdatedAt = this.formatDate(this.props.lastUpdatedAt)
+    const periodText = this.props.periodic ? `from ${startDate} to ${endDate}` : `last updated ${lastUpdatedAt}`
 
     return (
       <section className="DiscountType">
         <header className="DiscountTypeHeader">
           <div className="DiscountTypeInfo">
-            {this.props.name} (from {startDate} to {endDate})
+            {this.props.name} ({periodText})
           </div>
           <Link to={"/discounts-ua"} className="MenuLink">&#9776;</Link>
         </header>
