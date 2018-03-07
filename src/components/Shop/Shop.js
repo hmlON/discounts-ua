@@ -24,8 +24,15 @@ class Shop extends Component {
 
   fetchShop() {
     const path = this.props.match.params.shop
+
     API.shop(path)
-      .then(shop => this.setState({...shop}))
+      .then(response => {
+        if (response.started_parsing) {
+          setTimeout(()=>{ this.fetchShop() }, 1000)
+        }
+        return response
+      })
+      .then(response => this.setState({started_parsing: false, ...response}))
   }
 
   renderDiscountType(discountType) {
@@ -41,6 +48,7 @@ class Shop extends Component {
   }
 
   render() {
+    if (this.state.started_parsing) return <Loading text="Parsing discounts..."/>
     if (!this.state.discount_types) return <Loading />
 
     return (
