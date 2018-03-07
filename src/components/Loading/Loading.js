@@ -8,6 +8,11 @@ class Loading extends Component {
         <div className="LoadingCircle">
           Loading...
         </div>
+        { !!this.props.text &&
+          <div className="LoadingText">
+            {this.props.text}
+          </div>
+        }
       </div>
     );
   }
