@@ -3,7 +3,7 @@ import './Discount.css';
 
 class Discount extends Component {
   formatPrice(price) {
-    return price.toFixed(2)
+    return price && price.toFixed(2)
   }
 
   render() {
