@@ -9,9 +9,10 @@ class Discount extends Component {
   render() {
     const oldPrice = this.formatPrice(this.props.oldPrice)
     const newPrice = this.formatPrice(this.props.newPrice)
+    const shownOnMobileLine = 1 / this.props.width
 
     return (
-      <article className="Discount">
+      <article className={`Discount Discount--shownOnMobileLine-${shownOnMobileLine}`}>
         <img src={this.props.imageUrl} alt={this.props.name} className="DiscountImage"/>
         <div className="DiscountName">
           {this.props.name}

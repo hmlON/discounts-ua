@@ -15,6 +15,7 @@ class DiscountType extends Component {
                 newPrice={discount.price_new}
                 imageUrl={discount.img_url}
                 imageUrlSmall={discount.small_img_url}
+                width={discount.width_on_mobile}
                 key={discount.id} />
     )
   }

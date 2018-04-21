@@ -1,7 +1,5 @@
 .Discount {
   flex-grow: 1;
-  width: 300px;
-  max-width: 400px;
   margin: 6px;
   text-align: center;
   background: #fff;
@@ -35,9 +33,28 @@
   text-decoration: line-through;
 }
 
+@media (min-width: 620px) {
+  .Discount--shownOnMobileLine-1 {
+    width: 600px;
+    max-width: 800px;
+  }
+
+  .Discount--shownOnMobileLine-2 {
+    width: 300px;
+    max-width: 400px;
+  }
+}
+
 @media (max-width: 620px) {
   .Discount {
-    width: 45%;
     margin: 5px;
+  }
+
+  .Discount--shownOnMobileLine-1 {
+    max-width: 90%;
+  }
+
+  .Discount--shownOnMobileLine-2 {
+    max-width: 45%;
   }
 }
