@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Shop.css';
 import DiscountType from '../DiscountType/DiscountType';
 import API from '../../utils/api';
 import Loading from '../Loading/Loading';
